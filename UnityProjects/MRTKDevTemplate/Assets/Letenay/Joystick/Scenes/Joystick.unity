@@ -159,6 +159,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2578649064399513024, guid: 262b70b02609c85439cdaf12c4713ec3, type: 3}
   m_PrefabInstance: {fileID: 2578649064215403923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &411434592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3886276396588750248, guid: 18ff75ae01425a5439a4fc922fc5abb4, type: 3}
+  m_PrefabInstance: {fileID: 6699001994225139726}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67dff3e6a877b240a3017735beaf11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +597,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551252956}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1613535024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613535026}
+  - component: {fileID: 1613535025}
+  m_Layer: 0
+  m_Name: Ble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1613535025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613535024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548ec88c9beecf345be508b173b6de63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dryRyn: 0
+  debugTxt: {fileID: 0}
+--- !u!4 &1613535026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613535024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1710053216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1194,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695001591799241782, guid: 9272c676bfeb257429afdd18b7c0f981, type: 3}
+      propertyPath: raycastMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695001591799241782, guid: 9272c676bfeb257429afdd18b7c0f981, type: 3}
       propertyPath: raycastPointerVisible
       value: 0
       objectReference: {fileID: 0}
@@ -1147,7 +1208,7 @@ PrefabInstance:
     - target: {fileID: 3695001591799241782, guid: 9272c676bfeb257429afdd18b7c0f981, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 411434592}
     - target: {fileID: 3695001591799241782, guid: 9272c676bfeb257429afdd18b7c0f981, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1158,7 +1219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3695001591799241782, guid: 9272c676bfeb257429afdd18b7c0f981, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: JoystickController, Assembly-CSharp
+      value: Letenay.JoystickController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3695001591799241782, guid: 9272c676bfeb257429afdd18b7c0f981, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3479,6 +3540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GazeJoystick
       objectReference: {fileID: 0}
+    - target: {fileID: 3086260406957520697, guid: 18ff75ae01425a5439a4fc922fc5abb4, type: 3}
+      propertyPath: ble
+      value: 
+      objectReference: {fileID: 1613535025}
     - target: {fileID: 3382972840517825087, guid: 18ff75ae01425a5439a4fc922fc5abb4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3585,3 +3650,4 @@ SceneRoots:
   - {fileID: 1883278892}
   - {fileID: 726604447}
   - {fileID: 1796528720}
+  - {fileID: 1613535026}
