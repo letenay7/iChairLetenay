@@ -97,17 +97,18 @@ namespace Letenay
             supportFunctions.StopWheelchair();
         }
 
-        public void OnRaycastHit(Vector3 hitPoint)
+        public void OnRaycastHit(Transform hitTransform, Vector3 hitPoint, Vector2 hitTextureCoord)
         {
             if (!isJoystickEnabled)
             {
                 return;
             }
+
             Vector3 localPosition = transform.InverseTransformPoint(hitPoint);
             Vector3 targetPosition = localPosition;
             targetPosition.z = defaultIndicatorPosition.z;
             gazeIndicator.transform.localPosition = targetPosition;
-             Debug.LogWarning($"Target:  {targetPosition}");
+            //Debug.LogWarning($"Target:  {targetPosition}");
 
             /*  Values accepted by the wheelchair are <0, 255>
                Our joystick pointer is at local coords (0, 0, 0) and the joystick has size 260x260
