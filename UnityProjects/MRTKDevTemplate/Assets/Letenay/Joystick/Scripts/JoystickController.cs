@@ -4,7 +4,6 @@ using Microsoft.MixedReality.GraphicsTools;
 
 namespace Letenay
 {
-    using PupilLabs;
 
     public class JoystickController : MonoBehaviour
     {
